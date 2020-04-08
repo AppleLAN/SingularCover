@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
-<app-sidebar>
-  <router-outlet></router-outlet>
-</app-sidebar>
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidebar><app-sidebar></app-sidebar></mat-sidenav>
+  <mat-sidenav-content class="container">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

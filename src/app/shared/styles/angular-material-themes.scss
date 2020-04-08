@@ -1,4 +1,4 @@
-@import 'angular-material-variables';
-@import 'angular-material-color-palette';
+@import "angular-material-variables";
+@import "angular-material-color-palette";
 // custom main theme
-$main-theme: mat-light-theme($main-primary, $main-accent, $main-warning);
+$main-theme: mat-dark-theme($main-primary, $main-accent, $main-warning);

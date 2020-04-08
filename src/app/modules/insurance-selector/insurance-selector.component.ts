@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./insurance-selector.component.sass'],
 })
 export class InsuranceSelectorComponent implements OnInit {
-  public insurances$: Observable<Insurance[]>;
+  insurances$: Observable<Insurance[]>;
 
   constructor(db: AngularFireDatabase) {
     this.insurances$ = db

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidenavService } from '../../services';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.sass'],
 })
 export class SidebarComponent {
-  constructor() {}
+  links = [
+    {
+      name: 'Back To Dashboard',
+      route: '/dashboard',
+    },
+    {
+      name: 'Select an Insurance',
+      route: '/insurance-selector',
+    },
+    {
+      name: 'Favourites',
+      route: '/favourites',
+    },
+  ];
+  constructor(private sidenavService: SidenavService) {}
+
+  toggle() {
+    this.sidenavService.close();
+  }
 }

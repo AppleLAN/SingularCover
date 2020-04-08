@@ -14,6 +14,20 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  {
+    path: 'insurance-selector',
+    loadChildren: () =>
+      import('./modules/insurance-selector/insurance-selector.module').then(
+        (m) => m.InsuranceSelectorModule
+      ),
+  },
+  {
+    path: 'favourites',
+    loadChildren: () =>
+      import('./modules/favourites/favourites.module').then(
+        (m) => m.FavouritesModule
+      ),
+  },
 ];
 
 @NgModule({

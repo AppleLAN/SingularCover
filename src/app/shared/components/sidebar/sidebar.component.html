@@ -1,1 +1,12 @@
-Start !
+<mat-list role="list">
+  <mat-list-item *ngFor="let link of links" role="listitem">
+    <a
+      mat-button
+      [routerLink]="link.route"
+      routerLinkActive="active"
+      (click)="toggle()"
+    >
+      {{ link.name }}
+    </a>
+  </mat-list-item>
+</mat-list>

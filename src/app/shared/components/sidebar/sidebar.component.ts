@@ -9,18 +9,15 @@ import { SidenavService } from '../../services';
 export class SidebarComponent {
   links = [
     {
-      name: 'Back To Dashboard',
+      name: 'Dashboard',
       route: '/dashboard',
     },
     {
       name: 'Select an Insurance',
       route: '/insurance-selector',
     },
-    {
-      name: 'Favourites',
-      route: '/favourites',
-    },
   ];
+
   constructor(private sidenavService: SidenavService) {}
 
   toggle() {

@@ -9,24 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () =>
-      import('./modules/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
     path: 'insurance-selector',
-    loadChildren: () =>
-      import('./modules/insurance-selector/insurance-selector.module').then(
-        (m) => m.InsuranceSelectorModule
-      ),
-  },
-  {
-    path: 'favourites',
-    loadChildren: () =>
-      import('./modules/favourites/favourites.module').then(
-        (m) => m.FavouritesModule
-      ),
+    loadChildren: () => import('./modules/insurance-selector/insurance-selector.module').then((m) => m.InsuranceSelectorModule),
   },
 ];
 

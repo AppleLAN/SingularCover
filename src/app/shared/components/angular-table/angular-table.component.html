@@ -53,7 +53,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
   <div [hidden]="dataSource.data?.length" class="no-data-message">
-    No se han encontrado resultados
+    <div>
+      No se han encontrado resultados
+    </div>
   </div>
   <mat-paginator [length]="dataSource.data.length" [pageSizeOptions]="[5]"></mat-paginator>
 </div>

@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as Components from '@shared/components';
 import { SharedModule } from '@shared/shared.module';
+import { environment } from '@src/environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { environment } from '@src/environments/environment';
-import { CommonModule } from '@angular/common';
+import { SpinnerService } from './shared/services';
 
 @NgModule({
   declarations: [AppComponent, Components.SidebarComponent, Components.NavbarComponent],
@@ -19,9 +19,8 @@ import { CommonModule } from '@angular/common';
     SharedModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'singularcover-5779f'),
     AngularFireDatabaseModule,
-    CommonModule,
   ],
-  providers: [],
+  providers: [SpinnerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

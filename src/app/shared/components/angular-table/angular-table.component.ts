@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -8,6 +8,7 @@ import { Insurance } from '@src/app/modules/insurance-selector/models';
   selector: 'app-angular-table',
   templateUrl: './angular-table.component.html',
   styleUrls: ['./angular-table.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AngularTableComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -22,7 +23,7 @@ export class AngularTableComponent implements OnInit {
   displayedColumns: string[] = ['name', 'brand', 'kind', 'price', 'favorite'];
   dataSource: MatTableDataSource<Insurance[]>;
 
-  constructor() {
+  constructor(private cd: ChangeDetectorRef) {
     // Create 100 users
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(this.list);
@@ -31,6 +32,7 @@ export class AngularTableComponent implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.cd.detectChanges();
   }
 
   applyFilter(event: Event) {

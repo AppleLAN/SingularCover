@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { SpinnerService } from '../../services';
@@ -7,6 +7,7 @@ import { SpinnerService } from '../../services';
   selector: 'app-spinner',
   template: ` <div class="loading" *ngIf="subscription$ | async"></div> `,
   styleUrls: ['./spinner.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpinnerComponent implements OnInit {
   subscription$: Observable<boolean>;

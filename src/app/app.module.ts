@@ -8,7 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SpinnerService } from './shared/services';
+import { SidenavService, SpinnerService } from './shared/services';
 
 @NgModule({
   declarations: [AppComponent, Components.SidebarComponent, Components.NavbarComponent],
@@ -20,7 +20,7 @@ import { SpinnerService } from './shared/services';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'singularcover-5779f'),
     AngularFireDatabaseModule,
   ],
-  providers: [SpinnerService],
+  providers: [SpinnerService, SidenavService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

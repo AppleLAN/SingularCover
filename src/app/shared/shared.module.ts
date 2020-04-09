@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import * as Components from './components';
 import * as Modules from './modules';
-import * as Services from './services';
 
 @NgModule({
   imports: [CommonModule, Modules.AngularMaterialsModule, FlexLayoutModule],
@@ -15,7 +14,7 @@ import * as Services from './services';
     Components.AngularTableComponent,
     Components.SpinnerComponent,
   ],
-  providers: [Services.SidenavService],
+  providers: [],
   declarations: [Components.CenteredContainerComponent, Components.AngularTableComponent, Components.SpinnerComponent],
 })
 // shared module for better reusability and implementation of modules

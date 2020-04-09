@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
-import { SidenavService } from '../../services';
+import { SidenavService } from '@src/app/core/services';
+import { FavoritesModalComponent } from '../favorites-modal/favorites-modal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +12,13 @@ import { SidenavService } from '../../services';
 })
 export class NavbarComponent {
   @Input() sidebar: MatSidenav;
-  constructor(private sidenavService: SidenavService) {}
+  constructor(private sidenavService: SidenavService, public dialog: MatDialog) {}
 
   toggle() {
     this.sidenavService.toggle();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(FavoritesModalComponent, {});
   }
 }

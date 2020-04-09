@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SidenavService } from '../../services';
+import { SidenavService } from '@src/app/core/services';
 
 @Component({
   selector: 'app-sidebar',

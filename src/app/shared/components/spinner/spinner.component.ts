@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { SpinnerService } from '@src/app/core/services';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { SpinnerService } from '../../services';
 
 @Component({
   selector: 'app-spinner',

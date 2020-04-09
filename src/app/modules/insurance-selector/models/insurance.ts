@@ -8,4 +8,6 @@ export interface Insurance {
   kind: string;
   name: string;
   price: number;
+  favorite?: boolean;
+  key?: string;
 }

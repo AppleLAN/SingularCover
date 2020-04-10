@@ -85,3 +85,9 @@ All child components are created with Atomic Design and performance in mind, imp
 These implementations can be seen when working with the favorites modal open, as soon as you toggle a favorite element you will see the table behind it (if you are at the insurance view) update itself with the new information, and because we are using onPush with the async pipe all components only trigger a change when is really needed.
 
 The Angular Materials theme is custom made and implemented across the application.
+
+The modules are Lazy Loaded.
+
+Implemented an Utility Service for reusable functions and simplification of unit testing.
+
+## Thanks for reading and may the code be with you !

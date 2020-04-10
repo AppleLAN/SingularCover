@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { DashboardModule } from '../../dashboard.module';
 import { WelcomeComponent } from './welcome.component';
 
 describe('WelcomeComponent', () => {
@@ -8,9 +8,9 @@ describe('WelcomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WelcomeComponent ]
-    })
-    .compileComponents();
+      imports: [DashboardModule],
+      declarations: [WelcomeComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

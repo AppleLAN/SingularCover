@@ -1,0 +1,8 @@
+<div fxLayout="row" fxLayoutGap="15px" class="filter-container">
+  <div fxFlex="80%">
+    <app-table-filter (selectedValueChange)="applyFilter($event)"></app-table-filter>
+  </div>
+  <div fxFlex="20%">
+    <app-kinds-selector [(selectedValue)]="kindFilterValue" (selectedValueChange)="applyFilter($event)"></app-kinds-selector>
+  </div>
+</div>

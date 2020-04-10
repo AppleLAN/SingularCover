@@ -73,6 +73,10 @@
     <table class="table table-sm table-hover">
         <tbody>
 
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
 
 
 
@@ -150,7 +154,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/favorites-modal/favorites-modal.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/components/favorites-modal/favorites-modal.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -230,7 +234,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/favorites-modal/favorites-modal.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/components/favorites-modal/favorites-modal.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -243,10 +247,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { Insurance } from &#x27;@src/app/modules/insurance-selector/models&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component } from &#x27;@angular/core&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { map } from &#x27;rxjs/operators&#x27;;
+import { Insurance } from &#x27;../../models/insurance&#x27;;
 import { FavoriteService } from &#x27;../../services&#x27;;
 import { UtilitiesService } from &#x27;../../services/utilities.service&#x27;;
 
@@ -254,6 +258,7 @@ import { UtilitiesService } from &#x27;../../services/utilities.service&#x27;;
   selector: &#x27;app-favorites-modal&#x27;,
   templateUrl: &#x27;./favorites-modal.component.html&#x27;,
   styleUrls: [&#x27;./favorites-modal.component.sass&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FavoritesModalComponent {
   favorites$: Observable&lt;Insurance[]&gt;;
@@ -270,7 +275,7 @@ export class FavoritesModalComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-angular-table [list]&#x3D;&quot;favorites$ | async&quot;&gt;&lt;/app-angular-table&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-insurance-table [list]&#x3D;&quot;favorites$ | async&quot;&gt;&lt;/app-insurance-table&gt;
 </code></pre>
     </div>
 
@@ -306,8 +311,8 @@ export class FavoritesModalComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-angular-table [list]="favorites$ | async"></app-angular-table></div>'
-    var COMPONENTS = [{'name': 'AngularTableComponent', 'selector': 'app-angular-table'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CenteredContainerComponent', 'selector': 'app-centered-container'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FavoritesModalComponent', 'selector': 'app-favorites-modal'},{'name': 'HowToComponent', 'selector': 'app-how-to'},{'name': 'InsuranceSelectorComponent', 'selector': 'app-insurance-selector'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+        var COMPONENT_TEMPLATE = '<div><app-insurance-table [list]="favorites$ | async"></app-insurance-table></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CenteredContainerComponent', 'selector': 'app-centered-container'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FavoritesModalComponent', 'selector': 'app-favorites-modal'},{'name': 'HowToComponent', 'selector': 'app-how-to'},{'name': 'InsuranceSelectorComponent', 'selector': 'app-insurance-selector'},{'name': 'InsuranceTableComponent', 'selector': 'app-insurance-table'},{'name': 'KindsSelectorComponent', 'selector': 'app-kinds-selector'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'},{'name': 'TableFilterComponent', 'selector': 'app-table-filter'},{'name': 'TableFilterContainerComponent', 'selector': 'app-table-filter-container'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FavoritesModalComponent'};
 </script>

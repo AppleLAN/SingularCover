@@ -1,0 +1,7 @@
+.success-snackbar {
+  background: mat-color(mat-palette($mat-main-green, 500, 900, A700)) !important;
+}
+
+.error-snackbar {
+  background: mat-color($main-warning) !important;
+}

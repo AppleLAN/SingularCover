@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { StateManagerObject } from '@src/app/core/models';
 import { StateManagerService } from '@src/app/core/services';
-import { Insurance } from '@src/app/modules/insurance-selector/models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Insurance } from '../models';
 
 /**
  * @desc this service will hold functionalities for custom firebase favorites state mamagement.

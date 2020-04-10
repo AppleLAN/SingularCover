@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input
+    matInput
+    (keyup)="emitValue($event)"
+    placeholder="Type what you are looking for separated by a comma (name, brand, kind or price)"
+  />
+</mat-form-field>

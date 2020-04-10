@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { DashboardModule } from '../../dashboard.module';
 import { HowToComponent } from './how-to.component';
 
 describe('HowToComponent', () => {
@@ -8,9 +8,9 @@ describe('HowToComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HowToComponent ]
-    })
-    .compileComponents();
+      imports: [DashboardModule],
+      declarations: [HowToComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

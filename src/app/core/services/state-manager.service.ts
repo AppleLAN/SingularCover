@@ -3,6 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { StateManagerObject } from '../models';
+import { NotificationService } from './notification.service';
 import { SpinnerService } from './spinner.service';
 
 /**
@@ -12,7 +13,7 @@ import { SpinnerService } from './spinner.service';
 
 @Injectable()
 export class StateManagerService {
-  constructor(private db: AngularFireDatabase, private spinnerService: SpinnerService) {}
+  constructor(private db: AngularFireDatabase, private spinnerService: SpinnerService, private ns: NotificationService) {}
 
   /**
    * @desc returns the observable that contains the data base for async operations - it listens for changes
@@ -44,9 +45,8 @@ export class StateManagerService {
    */
   addDataBaseElement(dbName: string, value: any) {
     const promise = this.db.list(dbName).push(value);
-    promise.then((_) => console.log('success')).catch((err) => console.log(err, 'You do not have access!'));
+    promise.then((_) => this.ns.showNotification('Add successful', true)).catch((err) => this.ns.showNotification('Add error', false));
   }
-
   /**
    * @desc updates an element of the data base - it triggers an event
    * @param dbName - the route of the database we want to update
@@ -56,7 +56,9 @@ export class StateManagerService {
    */
   updateDataBaseElement(dbName: string, objectKey: string, value: any) {
     const promise = this.db.list(dbName).set(objectKey, value);
-    promise.then((_) => console.log('success')).catch((err) => console.log(err, 'You do not have access!'));
+    promise
+      .then((_) => this.ns.showNotification('Update successful', true))
+      .catch((err) => this.ns.showNotification('Update error', false));
   }
 
   /**
@@ -67,7 +69,9 @@ export class StateManagerService {
    */
   deleteDataBaseElement(dbName: string, objectKey: string) {
     const promise = this.db.list(dbName).remove(objectKey);
-    promise.then((_) => console.log('success')).catch((err) => console.log(err, 'You do not have access!'));
+    promise
+      .then((_) => this.ns.showNotification('Delete successful', true))
+      .catch((err) => this.ns.showNotification('Delete error', false));
   }
 
   /**

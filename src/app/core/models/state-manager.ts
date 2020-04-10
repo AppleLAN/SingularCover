@@ -1,6 +1,6 @@
-import { Insurance } from '@src/app/modules/insurance-selector/models';
+import { BackendInsurance } from '@src/app/shared/models';
 
 export interface StateManagerObject {
-  data: Insurance;
+  data: BackendInsurance;
   key: string;
 }

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { Insurance } from '@src/app/modules/insurance-selector/models';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Insurance } from '../../models/insurance';
 import { FavoriteService } from '../../services';
 import { UtilitiesService } from '../../services/utilities.service';
 
@@ -9,6 +9,7 @@ import { UtilitiesService } from '../../services/utilities.service';
   selector: 'app-favorites-modal',
   templateUrl: './favorites-modal.component.html',
   styleUrls: ['./favorites-modal.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FavoritesModalComponent {
   favorites$: Observable<Insurance[]>;

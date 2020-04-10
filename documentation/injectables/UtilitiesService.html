@@ -83,6 +83,15 @@
                             <li>
                                 <a href="#formatInsurances">formatInsurances</a>
                             </li>
+                            <li>
+                                <a href="#formatKinds">formatKinds</a>
+                            </li>
+                            <li>
+                                <a href="#formatSelectObject">formatSelectObject</a>
+                            </li>
+                            <li>
+                                <a href="#searchElementInArray">searchElementInArray</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -123,8 +132,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/shared/services/utilities.service.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/shared/services/utilities.service.ts:17</a></div>
                 </td>
             </tr>
 
@@ -140,6 +149,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -154,6 +164,12 @@
                                     </td>
 
 
+                                    <td>
+                                        <ul>
+<li>the insurances contained inside the StateManagerObject array</li>
+</ul>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -165,7 +181,278 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Insurance[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatKinds"></a>
+                    <span class="name">
+                        <b>
+                            formatKinds
+                        </b>
+                        <a href="#formatKinds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatKinds(insurances: <a href="../interfaces/StateManagerObject.html">StateManagerObject[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/shared/services/utilities.service.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>insurances</td>
+                                    <td>
+                                                <code><a href="../interfaces/StateManagerObject.html" target="_self" >StateManagerObject[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>the insurances contained inside the StateManagerObject array</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Kind.html" target="_self" >Kind[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Kind[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatSelectObject"></a>
+                    <span class="name">
+                        <b>
+                            formatSelectObject
+                        </b>
+                        <a href="#formatSelectObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatSelectObject(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, viewValue: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/shared/services/utilities.service.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>the value to be contained inside the SelectObject</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>viewValue</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>the viewValue to be contained inside the SelectObject</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SelectObject.html" target="_self" >SelectObject</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>SelectObject</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchElementInArray"></a>
+                    <span class="name">
+                        <b>
+                            searchElementInArray
+                        </b>
+                        <a href="#searchElementInArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchElementInArray(object: <a href="../interfaces/Insurance.html">Insurance</a>, value: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/shared/services/utilities.service.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                                <code><a href="../interfaces/Insurance.html" target="_self" >Insurance</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>the object to be iterated</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>the string array to be checked</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean</p>
+
                     </div>
                 </td>
             </tr>
@@ -179,7 +466,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { StateManagerObject } from &#x27;@src/app/core/models&#x27;;
-import { Insurance } from &#x27;@src/app/modules/insurance-selector/models&#x27;;
+import { Insurance, Kind, SelectObject } from &#x27;../models&#x27;;
 
 /**
  * @desc this service will hold functionalities shared across the app components.
@@ -188,6 +475,11 @@ import { Insurance } from &#x27;@src/app/modules/insurance-selector/models&#x27;
 
 @Injectable()
 export class UtilitiesService {
+  /**
+   * @desc formats the StateManageObjectArray to include the brand and kind image route
+   * @param insurances - the insurances contained inside the StateManagerObject array
+   * @return Insurance[]
+   */
   formatInsurances(insurances: StateManagerObject[]): Insurance[] {
     return insurances.map((i: StateManagerObject) &#x3D;&gt; ({
       ...i.data,
@@ -195,6 +487,47 @@ export class UtilitiesService {
       brandImage: &#x60;assets/icons/${i.data[&#x27;brand-image&#x27;]}&#x60;,
       kindImage: &#x60;assets/icons/${i.data[&#x27;Kind-image&#x27;]}&#x60;,
     }));
+  }
+
+  /**
+   * @desc formats the StateManageObjectArray to include the kind image route, the correct object properties and a default selector object
+   * @param insurances - the insurances contained inside the StateManagerObject array
+   * @return Kind[]
+   */
+  formatKinds(insurances: StateManagerObject[]): Kind[] {
+    return [
+      {
+        kind: &#x27;None&#x27;,
+        kindImage: &#x27;&#x27;,
+      },
+      ...insurances.map((i: StateManagerObject) &#x3D;&gt; ({
+        kind: i.data.kind,
+        kindImage: &#x60;assets/icons/${i.data[&#x27;Kind-image&#x27;]}&#x60;,
+      })),
+    ];
+  }
+
+  /**
+   * @desc formats an object to include the correct object properties for a mat-select
+   * @param value - the value to be contained inside the SelectObject
+   * @param viewValue - the viewValue to be contained inside the SelectObject
+   * @return SelectObject
+   */
+  formatSelectObject(value: any, viewValue: string): SelectObject {
+    return { value, viewValue };
+  }
+
+  /**
+   * @desc checks that every value inside an array is included inside an object property at least once
+   * @param object - the object to be iterated
+   * @param value - the string array to be checked
+   * @return boolean
+   */
+  searchElementInArray(object: Insurance, value: string[]): boolean {
+    return value.every((v) &#x3D;&gt; {
+      const formattedValue &#x3D; v.trim().toLowerCase();
+      return Object.keys(object).find((k) &#x3D;&gt; typeof object[k] &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; object[k].toLowerCase().includes(formattedValue));
+    });
   }
 }
 </code></pre>

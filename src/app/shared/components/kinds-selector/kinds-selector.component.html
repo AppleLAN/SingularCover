@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>Kinds</mat-label>
+  <mat-select [(ngModel)]="selectedValue" (ngModelChange)="emitValue($event)" name="kind">
+    <mat-option *ngFor="let kind of kinds$ | async" [value]="kind.kindImage ? kind.kind : ''">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" fxFlexFill>
+        <img *ngIf="kind.kindImage" class="icon" [src]="kind.kindImage" />
+        <span>{{ kind.kind }} </span>
+      </div>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

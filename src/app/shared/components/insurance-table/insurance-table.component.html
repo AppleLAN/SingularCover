@@ -1,13 +1,6 @@
-<mat-form-field>
-  <mat-label>Filter</mat-label>
-  <input
-    matInput
-    (keyup)="applyFilter($event)"
-    placeholder="Please type something, we are going to look for names, brands, kinds and prices ! "
-  />
-</mat-form-field>
+<app-table-filter-container [(dataSource)]="dataSource" [list]="list"></app-table-filter-container>
 
-<div class="mat-elevation-z8">
+<div>
   <table mat-table [dataSource]="dataSource" matSort>
     <!-- Name Column -->
     <ng-container matColumnDef="name">

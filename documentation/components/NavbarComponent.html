@@ -420,7 +420,7 @@ export class NavbarComponent {
   &lt;/button&gt;
   &lt;h1 class&#x3D;&quot;example-app-name&quot;&gt;SingularCover&lt;/h1&gt;
   &lt;span class&#x3D;&quot;spacer&quot;&gt;&lt;/span&gt;
-  &lt;button mat-fab (click)&#x3D;&quot;openDialog()&quot;&gt;
+  &lt;button class&#x3D;&quot;favorite-button&quot; mat-fab (click)&#x3D;&quot;openDialog()&quot;&gt;
     &lt;mat-icon&gt;favorite&lt;/mat-icon&gt;
   &lt;/button&gt;
 &lt;/mat-toolbar&gt;
@@ -439,7 +439,12 @@ export class NavbarComponent {
 
 .spacer 
     flex: 1 1 auto
-</code></pre>
+
+.favorite-button
+    height: 45px
+    width: 45px
+    ::ng-deep .mat-button-wrapper
+        padding: 12px 0 !important</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -467,8 +472,8 @@ export class NavbarComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="example-toolbar">  <button mat-icon-button (click)="toggle()">    <mat-icon>menu</mat-icon>  </button>  <h1 class="example-app-name">SingularCover</h1>  <span class="spacer"></span>  <button mat-fab (click)="openDialog()">    <mat-icon>favorite</mat-icon>  </button></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AngularTableComponent', 'selector': 'app-angular-table'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CenteredContainerComponent', 'selector': 'app-centered-container'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FavoritesModalComponent', 'selector': 'app-favorites-modal'},{'name': 'HowToComponent', 'selector': 'app-how-to'},{'name': 'InsuranceSelectorComponent', 'selector': 'app-insurance-selector'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="example-toolbar">  <button mat-icon-button (click)="toggle()">    <mat-icon>menu</mat-icon>  </button>  <h1 class="example-app-name">SingularCover</h1>  <span class="spacer"></span>  <button class="favorite-button" mat-fab (click)="openDialog()">    <mat-icon>favorite</mat-icon>  </button></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CenteredContainerComponent', 'selector': 'app-centered-container'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FavoritesModalComponent', 'selector': 'app-favorites-modal'},{'name': 'HowToComponent', 'selector': 'app-how-to'},{'name': 'InsuranceSelectorComponent', 'selector': 'app-insurance-selector'},{'name': 'InsuranceTableComponent', 'selector': 'app-insurance-table'},{'name': 'KindsSelectorComponent', 'selector': 'app-kinds-selector'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'},{'name': 'TableFilterComponent', 'selector': 'app-table-filter'},{'name': 'TableFilterContainerComponent', 'selector': 'app-table-filter-container'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
 </script>

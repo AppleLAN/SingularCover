@@ -2,23 +2,23 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Insurance } from '@src/app/modules/insurance-selector/models';
+import { Insurance } from '../../models/insurance';
 import { FavoriteService } from '../../services';
 
 @Component({
-  selector: 'app-angular-table',
-  templateUrl: './angular-table.component.html',
-  styleUrls: ['./angular-table.component.sass'],
+  selector: 'app-insurance-table',
+  templateUrl: './insurance-table.component.html',
+  styleUrls: ['./insurance-table.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AngularTableComponent implements OnInit, OnChanges {
+export class InsuranceTableComponent implements OnInit, OnChanges {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  @Input() list: any[];
+  @Input() list: Insurance[];
 
   displayedColumns: string[] = ['name', 'brand', 'kind', 'price', 'favorite'];
-  dataSource: MatTableDataSource<Insurance[]>;
+  dataSource: MatTableDataSource<Insurance>;
 
   constructor(private cd: ChangeDetectorRef, private favoriteService: FavoriteService) {
     // Create 100 users
@@ -35,15 +35,6 @@ export class AngularTableComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.list.currentValue) {
       this.assignDataSource(changes.list.currentValue);
-    }
-  }
-
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
     }
   }
 

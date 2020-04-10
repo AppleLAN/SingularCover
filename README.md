@@ -74,3 +74,14 @@ In this case even if Angular Materials has a front end pagination with lazy load
 
 Better control of notification messages:
 To deliver specific error and success messages to the user instead of generic ones.
+
+## Things to consider when watching the code
+The main idea behind this application is to represent all the good practices that are available when working with an Angular application.
+
+You are going to find that every single function is commented, functional, declarative, with no side effects and improved with ES6 methods.
+
+All child components are created with Atomic Design and performance in mind, implementing onPush change detection strategy and the async pipe for reactive programming so you are not going to find any subscriptions, making everything secure against memory leaks.
+
+These implementations can be seen when working with the favorites modal open, as soon as you toggle a favorite element you will see the table behind it (if you are at the insurance view) update itself with the new information, and because we are using onPush with the async pipe all components only trigger a change when is really needed.
+
+The Angular Materials theme is custom made and implemented across the application.

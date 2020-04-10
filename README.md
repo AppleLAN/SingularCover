@@ -61,7 +61,7 @@ and
 ## Hosted Application
 The hosted application can be found at https://singularcover-5779f.web.app/insurance-selector
 
-## Things that can be improved 
+## Things to improve 
 I would have loved to use a backend framework to generate an Api and implement:
 
 HttpInterceptor for:
